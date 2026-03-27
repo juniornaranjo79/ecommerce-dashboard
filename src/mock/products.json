@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Smartphone Galaxy V5",
+    "category": "Electronics",
+    "price": 899.99,
+    "description": "Pantalla AMOLED de 6.7 pulgadas, 128GB de almacenamiento y cámara de 108MP.",
+    "image": "https://picsum.photos/id/160/400/300"
+  },
+  {
+    "id": 2,
+    "name": "Camiseta Algodón Premium",
+    "category": "Clothing",
+    "price": 25.5,
+    "description": "100% algodón orgánico, disponible en varios colores y tallas.",
+    "image": "https://picsum.photos/id/447/400/300"
+  },
+  {
+    "id": 3,
+    "name": "Lámpara de Escritorio LED",
+    "category": "Home",
+    "price": 45.0,
+    "description": "Brazo flexible, control táctil y 3 niveles de intensidad de luz.",
+    "image": "https://picsum.photos/id/3/400/300"
+  },
+  {
+    "id": 4,
+    "name": "Auriculares Noise Cancelling",
+    "category": "Electronics",
+    "price": 199.0,
+    "description": "Cancelación de ruido activa y batería de hasta 40 horas.",
+    "image": "https://picsum.photos/id/4/400/300"
+  },
+  {
+    "id": 5,
+    "name": "Zapatillas Deportivas Pro",
+    "category": "Clothing",
+    "price": 120.0,
+    "description": "Diseñadas para running de alto impacto con suela ergonómica.",
+    "image": "https://picsum.photos/id/5/400/300"
+  },
+  {
+    "id": 6,
+    "name": "Set de Cuchillos de Cocina",
+    "category": "Home",
+    "price": 75.99,
+    "description": "Acero inoxidable de alta calidad, incluye soporte de madera.",
+    "image": "https://picsum.photos/id/6/400/300"
+  },
+  {
+    "id": 7,
+    "name": "Reloj Inteligente Fit X",
+    "category": "Electronics",
+    "price": 150.0,
+    "description": "Monitoreo de ritmo cardíaco, GPS integrado y resistente al agua.",
+    "image": "https://picsum.photos/id/7/400/300"
+  },
+  {
+    "id": 8,
+    "name": "Chaqueta Impermeable",
+    "category": "Clothing",
+    "price": 85.0,
+    "description": "Ideal para senderismo, ultra ligera y con ventilación lateral.",
+    "image": "https://picsum.photos/id/8/400/300"
+  },
+  {
+    "id": 9,
+    "name": "Cafetera Express",
+    "category": "Home",
+    "price": 210.0,
+    "description": "Bomba de 15 bares para un espresso perfecto en casa.",
+    "image": "https://picsum.photos/id/9/400/300"
+  },
+  {
+    "id": 10,
+    "name": "Monitor Gaming 27\"",
+    "category": "Electronics",
+    "price": 350.0,
+    "description": "Resolución 4K, 144Hz de refresco y tecnología FreeSync.",
+    "image": "https://picsum.photos/id/10/400/300"
+  },
+  {
+    "id": 11,
+    "name": "Pantalones Cargo",
+    "category": "Clothing",
+    "price": 55.0,
+    "description": "Tela resistente con múltiples bolsillos funcionales.",
+    "image": "https://picsum.photos/id/11/400/300"
+  },
+  {
+    "id": 12,
+    "name": "Aspiradora Robot S9",
+    "category": "Home",
+    "price": 299.0,
+    "description": "Mapeo inteligente y control por voz mediante aplicación móvil.",
+    "image": "https://picsum.photos/id/12/400/300"
+  }
+]
