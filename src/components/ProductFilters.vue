@@ -17,7 +17,7 @@
         class="filter-select"
       >
         <option value="All">Todas las categorías</option>
-        <option value="Electronics">Electronica</option>
+        <option value="Electronics">Electrónica</option>
         <option value="Clothing">Ropa</option>
         <option value="Home">Hogar</option>
       </select>
