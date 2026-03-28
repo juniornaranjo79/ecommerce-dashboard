@@ -7,4 +7,4 @@ export interface Product {
   image: string;
 }
 
-export type Category = "All" | "Electronics" | "Clothing" | "Home";
+export type Category = "All" | "Electrónica" | "Ropa" | "Hogar";

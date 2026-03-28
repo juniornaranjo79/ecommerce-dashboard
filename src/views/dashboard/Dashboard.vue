@@ -18,7 +18,7 @@
           :product="product"
         />
       </div>
-      <div v-if="paginatedProducts.length === 0" class="empty-product">
+      <div v-if="paginatedProducts.length === 0" class="empty-state">
         <p>No se encontraron productos</p>
       </div>
       <Pagination
@@ -73,21 +73,15 @@ const { search, selectedCategory, currentPage, totalPages, paginatedProducts } =
   }
 }
 
-@media (min-width: 1280px) {
-  .products-grid {
-    gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.empty-product {
+.empty-state {
   align-items: center;
   display: flex;
   justify-content: center;
   padding: var(--space-5);
-  p {
-    color: var(--text-tertiary);
-    font-size: var(--text-base);
-  }
+}
+
+.empty-state p {
+  color: var(--text-tertiary);
+  font-size: var(--text-base);
 }
 </style>

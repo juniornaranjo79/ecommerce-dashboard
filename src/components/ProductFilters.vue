@@ -17,9 +17,9 @@
         class="filter-select"
       >
         <option value="All">Todas</option>
-        <option value="Electronics">Electrónica</option>
-        <option value="Clothing">Ropa</option>
-        <option value="Home">Hogar</option>
+        <option value="Electrónica">Electrónica</option>
+        <option value="Ropa">Ropa</option>
+        <option value="Hogar">Hogar</option>
       </select>
     </div>
   </div>
