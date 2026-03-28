@@ -1,14 +1,20 @@
 <template>
   <div v-if="product" class="product-detail">
-    <div class="img-container">
-      <router-link to="/" class="return-btn">← Volver al listado</router-link>
-      <img :src="product.image" :alt="product.name" />
-    </div>
-    <div class="info-container">
-      <h2 class="product-title">{{ product.name }}</h2>
-      <span class="category-badge">{{ product.category }}</span>
-      <p class="product-price">${{ product.price.toFixed(2) }}</p>
-      <p>{{ product.description }}</p>
+    <div class="detail-container">
+      <router-link to="/" class="return-btn"
+        ><span class="return-icon">←</span>Volver al listado</router-link
+      >
+      <div class="detail-grid">
+        <div class="img-container">
+          <img :src="product.image" :alt="product.name" />
+        </div>
+        <div class="info-container">
+          <span class="category-badge">{{ product.category }}</span>
+          <h1 class="product-title">{{ product.name }}</h1>
+          <p class="product-price">${{ product.price.toFixed(2) }}</p>
+          <p>{{ product.description }}</p>
+        </div>
+      </div>
     </div>
   </div>
   <div v-else><not-found /></div>
@@ -32,31 +38,12 @@ const product = computed(() =>
 
 <style scoped>
 .product-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  justify-content: center;
-  padding: 1rem;
-}
-.img-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-
-  img {
-    border-radius: 8px;
-  }
+  padding: var(--space-4);
 }
 
-.info-container {
-  align-items: center;
-  background-color: var(--white);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  padding: 1rem;
+.detail-container {
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .product-title {
@@ -64,32 +51,71 @@ const product = computed(() =>
 }
 
 .product-price {
-  color: var(--text-p);
+  color: var(--text-primary);
   font-size: 1.85rem;
   font-weight: 700;
 }
 
 .return-btn {
-  background-color: var(--accent);
-  border-radius: 8px;
-  color: var(--white);
-  font-weight: 600;
-  padding: 0.5rem;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.2s;
+  align-items: center;
+  color: var(--text-secondary);
+  display: inline-flex;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  gap: var(--space-2);
+  padding-bottom: var(--space-5);
+  transition: color 0.2s ease;
+}
+
+.return-btn:hover {
+  color: var(--accent);
+}
+
+.return-icon {
+  font-size: var(--text-lg);
+}
+
+.detail-grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .detail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.img-container {
+  aspect-ratio: 4/3;
+  background: var(--white);
+  border: 1px solid var(--bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 
 .category-badge {
+  align-self: flex-start;
   background-color: var(--accent);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-weight: 600;
   color: var(--white);
-  font-size: 0.75rem;
-  font-weight: bold;
   letter-spacing: 0.05em;
-  padding: 0.5rem;
+  padding: var(--space-1) var(--space-2);
   text-transform: uppercase;
-  width: 50%;
+  width: fit-content;
 }
 
 @media (min-width: 768px) {

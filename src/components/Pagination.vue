@@ -51,25 +51,25 @@ const updatePage = (newPage: number) => {
 .pagination {
   align-items: center;
   display: flex;
-  gap: 10px;
+  gap: var(--space-3);
   justify-content: center;
-  margin-top: 2rem;
-  padding: 1rem;
+  margin-top: var(--space-5);
+  padding: var(--space-4);
 }
 
 .page-numbers {
   display: flex;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 .page-btn,
 .page-number-btn {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   color: var(--accent);
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  padding: var(--space-2) var(--space-4);
   transition: all 0.2s;
 }
 
@@ -88,6 +88,6 @@ const updatePage = (newPage: number) => {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--white);
-  font-weight: bold;
+  font-weight: 500;
 }
 </style>

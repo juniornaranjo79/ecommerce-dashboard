@@ -1,6 +1,6 @@
 # 🛒 E-commerce Product Dashboard
 
-Este es un **Dashboard de Productos** desarrollado como una prueba técnica de nivel **Frontend Middle**. La aplicación permite gestionar un catálogo de productos con funcionalidades avanzadas de filtrado, búsqueda y navegación.
+Este es un **Dashboard de Productos** desarrollado como una prueba técnica para **Frontend**. La aplicación permite gestionar un catálogo de productos con funcionalidades avanzadas de filtrado, búsqueda y navegación.
 
 ## 🚀 Tecnologías y Herramientas
 

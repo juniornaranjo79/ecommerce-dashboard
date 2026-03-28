@@ -10,13 +10,13 @@
       />
     </div>
     <div class="category-field">
-      <p>Filtrar por:</p>
+      <label class="category-label">Categoría</label>
       <select
         :value="category"
         @change="onCategoryChange"
         class="filter-select"
       >
-        <option value="All">Todas las categorías</option>
+        <option value="All">Todas</option>
         <option value="Electronics">Electrónica</option>
         <option value="Clothing">Ropa</option>
         <option value="Home">Hogar</option>
@@ -49,33 +49,77 @@ const onCategoryChange = (event: Event) => {
 </script>
 <style scoped>
 .filters-container {
-  align-items: center;
   background: var(--white);
-  border-radius: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  justify-content: center;
-  margin: 0.85rem;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
+  gap: var(--space-4);
+  padding: var(--space-4);
 }
 
-.filter-input,
-.filter-select {
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  font-size: 1rem;
-  padding: 0.6rem 1rem;
+@media (min-width: 768px) {
+  .filters-container {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.search-field {
+  flex: 1;
+  max-width: 320px;
+}
+
+.category-field {
+  align-items: center;
+  display: flex;
+  gap: var(--space-3);
+}
+
+.category-label {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
 }
 
 .filter-input {
-  flex: 1;
-  min-width: 250px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-3);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.filter-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.filter-input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(66, 184, 131, 0.15);
+  outline: none;
 }
 
 .filter-select {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
   cursor: pointer;
-  min-width: 180px;
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-3);
+  transition: border-color 0.2s ease;
+}
+
+.filter-select:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(66, 184, 131, 0.15);
+  outline: none;
 }
 </style>

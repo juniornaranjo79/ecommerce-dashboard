@@ -27,17 +27,26 @@ const props = defineProps<Props>();
 <style scoped>
 .product-card {
   background-color: var(--white);
-  border-radius: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
-  padding: 0.8rem;
+  overflow: hidden;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  border-color: var(--border);
+  box-shadow: var(--shadow);
 }
 
 .product-image-container {
-  height: 200px;
+  aspect-ratio: 4 / 3;
   width: 100%;
+  overflow: hidden;
   img {
-    border-radius: 8px;
     height: 100%;
     object-fit: cover;
     width: 100%;
@@ -45,46 +54,44 @@ const props = defineProps<Props>();
 }
 
 .product-info {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 1rem;
+  gap: var(--space-3);
+  padding: var(--space-4);
 }
 
 .category-badge {
+  align-self: flex-start;
   background-color: var(--accent);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-weight: 600;
   color: var(--white);
-  font-size: 0.75rem;
-  font-weight: bold;
   letter-spacing: 0.05em;
-  padding: 0.2rem;
+  padding: var(--space-1) var(--space-2);
   text-transform: uppercase;
-  width: 80%;
 }
 
 .product-title {
-  color: var(--text-h);
-  font-size: 1.25rem;
-  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--text-xl);
 }
 
 .product-price {
-  color: var(--text-p);
-  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-size: var(--text-lg);
   font-weight: 700;
 }
 
 .view-detail-btn {
   background-color: var(--accent);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   color: var(--white);
-  font-weight: 600;
-  padding: 0.5rem;
+  display: block;
+  font-weight: 500;
+  padding: var(--space-2) var(--space-4);
   text-align: center;
-  text-decoration: none;
-  transition: background-color 0.2s;
+  transition: background 0.2s ease;
 }
 
 .view-detail-btn:hover {

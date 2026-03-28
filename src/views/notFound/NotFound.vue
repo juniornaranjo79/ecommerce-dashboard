@@ -34,7 +34,7 @@ const goBack = () => {
   display: flex;
   justify-content: center;
   min-height: 80vh;
-  padding: 2rem;
+  padding: var(--space-5);
   text-align: center;
 }
 
@@ -54,38 +54,38 @@ const goBack = () => {
 
 .divider {
   background-color: var(--accent);
-  border-radius: 2px;
+  border-radius: var(--radius-sm);
   height: 4px;
-  margin: 1.5rem auto;
+  margin: var(--space-5) auto;
   width: 60px;
 }
 
 .error-message {
-  color: var(--white);
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
 }
 
 .description {
-  color: var(--white);
-  margin-bottom: 2.5rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-5);
   line-height: 1.6;
 }
 
 .actions {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: var(--space-4);
   justify-content: center;
 }
 
 .btn {
   border: 2px solid transparent;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   cursor: pointer;
-  font-size: 1rem;
+  font-size: var(--text-base);
   font-weight: 600;
-  padding: 0.8rem 1.5rem;
+  padding: var(--space-2) var(--space-5);
   text-decoration: none;
   transition: all 0.2s;
 }
@@ -102,12 +102,13 @@ const goBack = () => {
 
 .btn-outline {
   background-color: transparent;
-  border-color: var(--white);
-  color: var(--white);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .btn-outline:hover {
   background-color: var(--bg-hover);
+  border-color: var(--bg-hover);
   color: var(--white);
 }
 
